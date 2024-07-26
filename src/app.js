@@ -1,11 +1,19 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+const pronoun = ["the", "our", "my", "your"];
+const adj = ["great", "big", "tremendous", "trusty"];
+const noun = ["jogger", "racoon", "dog"];
+const domain = [".com", ".es", ".us"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let domainName = "";
+let allDomain = [];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      for (let l = 0; l < domain.length; l++) {
+        domainName = `${pronoun[i]}${adj[j]}${noun[k]}${domain[l]}`;
+        allDomain.push(domainName);
+      }
+    }
+  }
+}
+console.log(allDomain); // eslint-disable-line no-console
